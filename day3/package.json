@@ -2,9 +2,9 @@
   "name": "serverlesson",
   "version": "1.0.0",
   "description": "creating simple server very much basic",
-  "main": "index.js",
+  "main": "./URLHandling/index.js",
   "scripts": {
-    "start":"node index",
+    "start":"node index2.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
