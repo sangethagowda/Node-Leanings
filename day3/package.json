@@ -4,9 +4,12 @@
   "description": "creating simple server very much basic",
   "main": "./URLHandling/index.js",
   "scripts": {
-    "start":"node index2.js",
+    "start": "node index2.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "url": "^0.11.4"
+  }
 }

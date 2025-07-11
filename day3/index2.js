@@ -1,5 +1,6 @@
 const http = require("http");
 const fs = require("fs");
+const url = require("url");
 
 // just creates server
 
@@ -8,6 +9,8 @@ const port = 3000;
 
 const myServer = http.createServer((req,res)=>{
     const log = `New request at time :${Date.now()}`
+    const myUrl = url.parse(req.url,true,true) 
+    console.log("myUrl",myUrl);
     fs.appendFile("log.txt",log,(err,data)=>{
         switch(res.url){
             case "/":res.end("Home")
@@ -16,6 +19,8 @@ const myServer = http.createServer((req,res)=>{
             break;
         }
     })
+    console.log("name",myUrl.query.name);
+    console.log("user ID",myUrl.query.id);
 
 });
 
